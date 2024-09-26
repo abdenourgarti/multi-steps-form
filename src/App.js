@@ -1,8 +1,13 @@
+import Stepper from "./components/Stepper";
+import StepperControl from "./components/StepperControl";
 
 function App() {
   return (
-    <div className="App">
-      <div className='text-3xl text-blue-800'>hello world</div>
+    <div className="md:w-1/2 mx-auto shadow-xl rounded-2xl pb-2 bg-white">
+      <div className="container horizontal mt-5">
+        <Stepper />
+      </div>
+      <StepperControl />
     </div>
   );
 }
