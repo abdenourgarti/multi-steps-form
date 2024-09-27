@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StepperContext } from "./contexts/StepperContex";
+import { StepperContext } from "./contexts/StepperContext";
 import Stepper from "./components/Stepper";
 import StepperControl from "./components/StepperControl";
 import Account from "./components/steps/Account"
@@ -52,7 +52,10 @@ function App() {
           </StepperContext.Provider>
         </div>
       </div>
-      <StepperControl handleClick={handleClick} steps={steps} currentStep={currentStep}/>
+      {currentStep !== steps.length && 
+        <StepperControl handleClick={handleClick} steps={steps} currentStep={currentStep}/>
+      }
+      
     </div>
   );
 }
